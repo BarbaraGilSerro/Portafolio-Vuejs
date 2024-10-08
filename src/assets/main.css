@@ -1,35 +1,33 @@
 @import './base.css';
+/* Importamos un archivo CSS externo llamado 'base.css', que probablemente contiene estilos base
+ o globales que se aplicarán a toda la aplicación. */
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  max-width: 1280px; /* Establecemos el ancho máximo del contenedor principal a 1280px, lo que limita el tamaño máximo de la aplicación en pantallas grandes. */
+  margin: 0 auto; /* Centramos el contenedor en la página horizontalmente aplicando auto a los márgenes laterales, mientras mantenemos el margen superior e inferior en 0. */
+  padding: 2rem; /* Añadimos un espacio interno de 2rem (unidades relativas al tamaño de la fuente actual) alrededor de todo el contenedor. */
+  font-weight: normal; /* Establecemos el peso de la fuente en 'normal', lo que puede sobrescribir cualquier estilo de fuente previamente definido. */
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+a {
+  text-decoration: none; /* Quitamos el subrayado predeterminado de los enlaces para darles un aspecto más limpio y moderno. */
+  color: var(--vt-c-white); /* Aplicamos un color blanco a los enlaces, utilizando una variable CSS definida en el archivo 'base.css'. Este enfoque de variables es útil para mantener una paleta de colores consistente en toda la aplicación. */
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/* A partir de aquí, se manejan las Media Queries para adaptar el diseño a pantallas de diferentes tamaños y hacer la interfaz más responsiva. */
+
+@media (max-width: 768px) {
+  #app {
+    display: flex; /* Activamos Flexbox para disponer los elementos hijos de #app de manera flexible. */
+    flex-direction: column; /* Alineamos los elementos de #app en una dirección vertical (columna) en pantallas más pequeñas, lo que suele mejorar la legibilidad en dispositivos móviles. */
+    font-size: small; /* Reducimos el tamaño de fuente para hacer que el contenido sea más compacto y adecuado para pantallas pequeñas. */
   }
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: flex; /* Activamos Flexbox también para pantallas grandes. */
+    flex-direction: column; /* Continuamos alineando los elementos en una columna para pantallas grandes, pero puede haber otras configuraciones que se ajusten mejor dependiendo del diseño. */
+    width: 80%; /* Hacemos que el contenedor ocupe solo el 80% del ancho de la pantalla, lo que le da más espacio en los laterales y evita que se vea demasiado extendido en pantallas grandes. */
   }
 }
