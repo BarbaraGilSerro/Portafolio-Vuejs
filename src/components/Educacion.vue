@@ -63,9 +63,6 @@ const posicionFecha = (index) => {
       :key="index"
       :style="{ '--fecha-color': fechaColor[index].color }"
     >
-      <div class="fecha">
-        {{ item.fecha }}
-      </div>
       <div class="fecha-color" :style="posicionFecha(index)">
         {{ item.fecha }}
       </div>
@@ -101,7 +98,6 @@ body {
 
 .timeline li {
   position: relative;
-
   padding: 20px 20px;
   font-size: 1em;
   line-height: 1.75em;
@@ -109,7 +105,6 @@ body {
   border-top: 3px solid transparent;
   border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
   border-image-slice: 1;
-  counter-increment: section;
 }
 
 .timeline li:first-child {
@@ -117,6 +112,7 @@ body {
 }
 
 .timeline .fecha-color {
+  font-weight: bold;
   position: absolute;
   padding: 10px;
   /* background-color: $black;  Esto no está aplicando el color */
@@ -144,11 +140,6 @@ body {
 .timeline li:nth-child(even)::before {
   right: 100%;
   margin-right: -20px;
-}
-
-.fecha {
-  font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .title {
