@@ -3,6 +3,8 @@
 //ejecutar en forma de html y darle estilos
 //Aca se coloca todo java script
 import NavBar from './components/NavBar.vue';
+import DatosPersonales from './components/DatosPersonales.vue';
+import Educacion from './components/Educacion.vue';
 </script>
 
 <template>
@@ -10,9 +12,14 @@ import NavBar from './components/NavBar.vue';
 <header>
 <!--Barra de navegacion -->
       <NavBar />  
+<!--Datos personales --> 
+      <DatosPersonales/>     
 </header>
 <main>
-  <section id="educacion"><h2>Educación - Cursos</h2></section>
+  <!--Los estilos css se encuentran en base.css --> 
+  <section id="educacion"><h2>Educación - Cursos</h2>
+  <Educacion />
+  </section>
     <section id="experiencia"><h2>Experiencia</h2></section>
     <section id="proyectos"><h2>Proyectos</h2></section>
     <section id="habilidades"><h2>Habilidades</h2></section>
