@@ -1,51 +1,34 @@
 <script setup>
 import { ref } from 'vue';
 
-const fechaColor = ref([
-  { color: '#41516c' },
-  { color: '#FBCA3E' },
-  { color: '#E24A68' },
-  { color: '#1B5F8C' },
-  { color: '#4CADAD' },
-]);
 
 const educacion = ref([
   {
     fecha: '2024',
-    title: 'Técnicatura Universitaria en Programación',
-    descripcion:
-      'Incumbencias Profesionales: Operación y programación de computadoras, desarrollo de programas en distintos lenguajes, análisis y control de sistemas informáticos.',
-    enlace: 'https://www.youtube.com/',
+    title: 'Tecnicatura Universitaria en Programación',
+    lugar: 'UTN San Rafael',
+    descripcion: 'Cursado de un año de la carrera.',
+    enlace: 'https://www.frsr.utn.edu.ar',
   },
+
   {
-    fecha: '2023',
-    title: 'Desarrollador Full Stack',
-    descripcion:
-      'Trabajé en XYZ Tech, donde diseñé y desarrollé aplicaciones web completas utilizando tecnologías como Node.js, React y MongoDB.',
-    enlace: 'http://www.direccion.com',
+    fecha: '2006',
+    title: 'Ingeniería Industrial',
+    lugar: 'UTN San Rafael',
+    descripcion: 'Obtención del título de Ingeniera Industrial con un promedio de 8,95.',
+    enlace: 'https://www.frsr.utn.edu.ar',
   },
+
   {
-    fecha: '2022',
-    title: 'Internship en Desarrollo Web',
-    descripcion:
-      'Realicé una pasantía en ABC Solutions, contribuyendo en la creación de interfaces de usuario y optimización de sitios web.',
-    enlace: 'http://www.direccion.com',
-  },
-  {
-    fecha: '2021',
-    title: 'Proyecto Personal - Aplicación de Gestión de Tareas',
-    descripcion:
-      'Desarrollé una aplicación para la gestión de tareas diarias usando HTML, CSS y JavaScript, implementando funcionalidades como listas de tareas y recordatorios.',
-    enlace: 'http://www.direccion.com',
-  },
-  {
-    fecha: '2020',
-    title: 'Curso de Introducción a la Programación',
-    descripcion:
-      'Completé un curso en línea sobre fundamentos de programación, donde aprendí lenguajes como Python y Java.',
-    enlace: 'http://www.direccion.com',
+    fecha: '2004',
+    title: 'Ingeniería Industrial',
+    lugar: 'Fachhochschule für Technik – Esslingen Stuttgart',
+    descripcion: 'Cursado de 6 materias de la carrera de Ingeniería Industrial en Alemania y la realización de un proyecto de 3 semanas en Daimler Chrysler A.G. en el departamento de Logística, Procesos y Métodos.',
+    enlace: 'https://www.hs-esslingen.de',
   },
 ]);
+
+
 
 const posicionFecha = (index) => {
   if (index % 2 === 0) {
@@ -61,14 +44,15 @@ const posicionFecha = (index) => {
     <li
       v-for="(item, index) in educacion"
       :key="index"
-      :style="{ '--fecha-color': fechaColor[index].color }"
+      
     >
       <div class="fecha-color" :style="posicionFecha(index)">
         {{ item.fecha }}
       </div>
       <h3 class="title">{{ item.title }}</h3>
+      <p class="lugar">{{ item.lugar }}</p>
       <div class="descripcion">{{ item.descripcion }}</div>
-      <!-- <a class="enlace" :href="item.enlace" target="_blank">Saber más</a> -->
+      <a class="enlace" :href="item.enlace" target="_blank">{{item.enlace}}</a>
     </li>
   </ul>
 </template>
@@ -76,21 +60,11 @@ const posicionFecha = (index) => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
 
-/* Colors Asi no se puede declarar colores. Tendrias que hacer lo mismo que en base.css */
-/* $black: #34435e;
-$white: #ffffff; */
-
-/* General Styles Mejor mover esto a base.css ya que aplica a toda la app y no solo a Educacion.vue*/
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0 4em;
-}
 
 /* Timeline Styles */
 .timeline {
   list-style: none;
-  padding-left: 40px;
+  padding-left: 10px;
   min-width: 300px;
   max-width: 500px;
   margin: auto;
@@ -101,7 +75,6 @@ body {
   padding: 20px 20px;
   font-size: 1em;
   line-height: 1.75em;
-  /* color: $black; Esto no está aplicando el color */
   border-top: 3px solid transparent;
   border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
   border-image-slice: 1;
@@ -115,11 +88,12 @@ body {
   font-weight: bold;
   position: absolute;
   padding: 10px;
-  /* background-color: $black;  Esto no está aplicando el color */
   text-align: center;
   line-height: 1.25em;
-  /* color: $white; Esto no está aplicando el color  */
   font-size: 1em;
+  display: flex;
+  align-items: center;
+  height: 80%;
 }
 
 .timeline li:nth-child(odd) {
@@ -144,16 +118,24 @@ body {
 
 .title {
   font-size: 1.2em;
+  font-weight: bold;
   margin: 5px 0;
 }
+
+.lugar { 
+  font-size: 1em; 
+  font-style: italic; 
+  margin: 5px 0; }
 
 .descripcion {
   margin: 10px 0;
 }
 
 .enlace {
-  /* color: $black; Esto no está aplicando el color  */
   text-decoration: underline;
   cursor: pointer;
+  color: grey;
+  font-size: 80%;
+  font-style: italic;
 }
 </style>
