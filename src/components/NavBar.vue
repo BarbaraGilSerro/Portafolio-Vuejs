@@ -3,7 +3,7 @@
         <div class="navbar-menu">
           <ul>
             <!---v-for: recorre el objeto in 'Navegacion' y luego entre {} le pedimos que traiga el nombre-->
-            <a v-for="nav in navegacion" :key="nav.nombre" href="nav.enlace" class="nav-item" >{{nav.nombre}}</a>
+            <a v-for="nav in navegacion" :key="nav.nombre" :href="nav.enlace" class="nav-item" >{{nav.nombre}}</a>
           </ul>
           </div>
         </nav>
