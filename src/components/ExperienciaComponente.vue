@@ -7,7 +7,7 @@ import { ref } from 'vue';
 const experiencia = ref([
   {
     fecha: '2011 – Actualmente',
-    title: 'GESTION Y ADMINISTRACION DE LA FUNDACION UNIVERSIDAD EMPRESA DEL SUR MENDOCINO',
+    title: 'Gestión y administración de la fundación universidad empresa del sur mendocino',
     lugar: 'UTN SAN RAFAEL',
     descripcion: `Manejo experto de Tango Gestión para la gestión contable, administración financiera, presentación de estados contables y documentación legal.
     Coordinación integral de proyectos edilicios universitarios, en cuanto a la administración de compras de insumos, adquisición de materiales, cumpliendo normativas de comercio y gestionando relaciones con proveedores.
@@ -16,28 +16,28 @@ const experiencia = ref([
   },
   {
     fecha: '2010 – 2011',
-    title: 'IMPLEMENTACION Y PUESTA EN MARCHA SOFTWARE TANGO GESTION EN FUESM',
+    title: 'Implementación y puesta en marcha software tango gestión en FUESM',
     lugar: 'UTN FRSR, San Rafael, Mendoza',
     descripcion: `Esta responsabilidad surgió tras optimizar la carga de una extensa encuesta (área de investigación de la UTN) mediante programación en Excel. Mi habilidad en esta tarea y la jubilación del encargado de contabilidad condujeron al Decano a designarme para liderar la transición a un sistema contable automatizado. Anteriormente la contabilidad era realizada manualmente.`,
     enlace: ''
   },
   {
     fecha: '2005 – Actualmente',
-    title: 'ENCARGADA DEL PROGRAMA DAAD-UTN',
+    title: 'Encargada del programa DAAD-UTN',
     lugar: 'UTN -FRSR',
     descripcion: `Desde el regreso del intercambio realizado en Alemania durante 1 año, soy la referente del programa de becas del cual participe, impulsando un ciclo de desarrollo sostenible.`,
     enlace: 'https://www.frsr.utn.edu.ar'
   },
   {
     fecha: '2005 - 2006',
-    title: 'GESTION DEL MANTENIMIENTO DEL SISTEMA DE CALIDAD DE EMEPA S.A',
+    title: 'Gestión del mantenimiento del sistema de calidad de Emepa S.A',
     lugar: 'Lujan de Cuyo, Mendoza',
     descripcion: `Gestión del mantenimiento del Sistema de Calidad, como así también en el asesoramiento para la implementación del Sistema integrado de gestión de Calidad, Medio Ambiente y Seguridad y Salud Ocupacional. ISO 9001:2000, ISO 14001:2004, OHSAS 18001:1999. Programación en Excel con Visual Basic`,
     enlace: 'https://emepamendoza.com'
   },
   {
     fecha: 'Marzo 2005 – septiembre 2005',
-    title: 'PRACTICAS SUPERIORES EN ROBERT BOSH GMBH',
+    title: 'Practicas superiores en Robert Bosh GMBH',
     lugar: 'Stuttgart, Alemania',
     descripcion: `Tareas en el Área de „Economía de materiales“.
     Asistencia en la “Base de datos generales de materiales” a través de SAP R/3.
@@ -74,14 +74,23 @@ const experiencia = ref([
     border-radius: 15px;
 }
 
-.titulo {
+.title {
     font-size: 1.5rem;
-    color: #d53a9d; /* porque no se aplica el color?*/
+    /* background: linear-gradient(to right,#d53a9d 0%,#6f6f6f 100%);
+    background-clip: text;
+    color: transparent;  */
+    color: #6f6f6f;
+    font-variant: small-caps;
+    font-style:initial;
+    
 }
 
 .fecha {
     font-size: 1rem;
-    color: #743ad5; /* y acaso no puedo hacer un gradiente como la linea de estudios?*/ 
+    background: linear-gradient(to right,#743ad5 0%, #d53a9d 100%);
+    background-clip: text;
+    color: transparent; 
+    display: inline-block; 
     margin-top: 1rem;
 }
 
@@ -90,11 +99,11 @@ const experiencia = ref([
     flex-direction: column;
 }
 
-.item {
+.descripcion {
     align-items: center;
     display: flex;
-    flex-direction: column;  /*Alinea los elementos en columna dentro de cada item, supuestamente no vi el cambio*/
-    padding: 1rem;
+    flex-direction: column; 
+    padding: 0rem;
     gap: 1.5rem;
     
 }

@@ -4,7 +4,7 @@ import instagram from '/src/assets/instagram_icon.svg';
 import github from '/src/assets/github_icon.svg';
 import cv from '/src/assets/cv_resume_icon.svg';
 
-const title = 'Barbara Gil';
+const title = 'Bárbara Gil';
 const descripcion = 'Ingeniera Industrial y estudiante de la Tecnicatura Universitario en Programación - UTN';
 const residencia = 'San Rafael, Mendoza, Argentina';
 const presentacion = 'Hola, Bienvenido a mi portafolio de proyectos. ';
@@ -14,7 +14,7 @@ const redesSociales = [
   { id: 2, name: 'github', src: github, url: 'https://github.com/BarbaraGilSerro' },
   { id: 3, name: 'curriculum', src: cv, url: 'https://drive.google.com/file/d/16cTYcmFretYzMtnKq8MR8EYApFgfMvy5/view?usp=sharing' },
 ];
-const telefono = '+54 9 2604-474849';
+const telefono = '+54 9 2604-512468';
 </script>
 
 <template>
@@ -46,7 +46,7 @@ p {
 }
 
 .card {
-  background-color: rgb(28, 41, 52);
+  background-color: rgb(29, 23, 34);
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
