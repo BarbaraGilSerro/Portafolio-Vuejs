@@ -22,9 +22,10 @@ const navegacion = ref([
 <style scoped>
 .navbar {
   background: linear-gradient(to right, #d53a9d, #743ad5);
+  border-radius: 8px;
   color: #fff;
-  padding: 0.1rem 1rem;
-  height: 2.5rem;
+  padding: 0.3rem 1rem;
+  height: 2.7rem;
   align-items: center;
 }
 .navbar-menu {

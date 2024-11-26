@@ -7,6 +7,8 @@ import DatosPersonales from './components/DatosPersonales.vue';
 import Educacion from './components/EducacionComponente.vue';
 import ExperienciaComponente from './components/ExperienciaComponente.vue';
 import ProyectosComponente from './components/ProyectosComponente.vue';
+import HabilidadesComponente from './components/HabilidadesComponente.vue';
+import InteresesComponente from './components/InteresesComponente.vue';
 </script>
 
 <template>
@@ -28,8 +30,14 @@ import ProyectosComponente from './components/ProyectosComponente.vue';
     <section id="proyectos"><h2>Proyectos</h2></section>
     <ProyectosComponente/>
     <section id="habilidades"><h2>Habilidades</h2></section>
+    <HabilidadesComponente/>
     <section id="intereses"><h2>Intereses</h2></section>
+    <InteresesComponente/>
 </main>
+<footer>
+    <a href="#top">Inicio</a>
+    <p>© 2024 Bárbara Gil Serro - Portafolio web</p>
+</footer>
 </template>
 
 <style scoped>

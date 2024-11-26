@@ -38,7 +38,7 @@ misProyectos.value = ([
     {
         id: 4,
         src: Bosch,
-        titulo: "Optimización Ambiental en la Recepción de Mercaderías (Recertificación ISO 14001). Robert Bosh GMBH (2005)",
+        titulo: "Optimización Ambiental en la Recepción de Mercaderías (Recertificación ISO 14001). Robert Bosch GMBH (2005)",
         descripcion: "Realicé el análisis, optimización y consolidación de mejoras en el proceso de recepción de mercaderías desde el punto de vista ambiental. Se implementaron mejoras significativas en la reutilización de materiales para el transporte de productos desde el proveedor hasta nuestra línea de producción.",
         projectoLink: "https://www.google.com.ar",
         githubLink: "https://github.com/usuario/proyecto"
@@ -59,12 +59,12 @@ misProyectos.value = ([
                 <!-- Muestra el título y la descripción del proyecto utilizando la interpolación de Vue.js -->
                 <h3>{{ proyecto.titulo }}</h3>
                 <p>{{ proyecto.descripcion }}</p>
-                <div class="proyecto-links">
+                <!-- <div class="proyecto-links">
                     <a :href="proyecto.projectoLink" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
                         Proyecto</a>
                     <a :href="proyecto.githubLink" class="github-link" target="_blank" rel="noopener noreferrer">Ver
                         Código en GitHub</a>
-                </div>
+                </div> -->
             </div>
         </li>
     </div>
@@ -95,7 +95,8 @@ misProyectos.value = ([
     /* Ajusta el tamaño del fondo para que cubra el área completa */
     background-size: 400% 400%;
     /* Aplica una animación al fondo que dura 15 segundos, tiene una transición suave y se repite infinitamente */
-    /* animation: gradient 15s ease infinite; */
+    animation: gradient 15s ease infinite;
+    border-radius: 10px;
 }
 
 /* Define una animación llamada 'gradient' para cambiar la posición del fondo */
@@ -160,9 +161,11 @@ misProyectos.value = ([
     /* Establece un margen superior e inferior de 10px */
     margin: 10px 0;
     /* Define el tamaño de la fuente a 1.3em (relativo al tamaño de fuente del contenedor) */
-    font-size: 1.3em;
+    font-size: 1em;
     /* Aplica un color gris oscuro (#333) al texto */
-    color: #333;
+    color: #666;
+    font-variant: small-caps;
+    font-weight: bold;
 }
 
 /* Estilo para los párrafos de los proyectos */
@@ -170,7 +173,7 @@ misProyectos.value = ([
     /* Establece un margen superior e inferior de 10px */
     margin: 10px 0;
     /* Define el tamaño de la fuente a 1em (igual al tamaño de fuente base) */
-    font-size: 1em;
+    font-size: 0.8em;
     /* Aplica un color gris (#666) al texto */
     color: #666;
 }

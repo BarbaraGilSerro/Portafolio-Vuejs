@@ -123,6 +123,7 @@ const experiencia = ref([
 .descripcion { 
     margin: 10px 0; 
     text-align: justify;
+    margin-right: 30px;
 }
 
 

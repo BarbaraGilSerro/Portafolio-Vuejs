@@ -93,7 +93,7 @@ const posicionFecha = (index) => {
   font-size: 1em;
   display: flex;
   align-items: center;
-  height: 80%;
+  height: 90%;
 }
 
 .timeline li:nth-child(odd) {

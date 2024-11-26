@@ -28,7 +28,7 @@ const telefono = '+54 9 2604-512468';
           <a :href="red.url"><img class="icon-redsocial" :src="red.src" width="35rem" :alt="red.name"></a>
         </li>
       </ul>
-      <h3>☎ Mi Teléfono personal: {{ telefono }}</h3>
+      <h4>☎ Mi Teléfono personal: {{ telefono }}</h4>
       <h4>{{ residencia }}</h4>
     </div>
   </section>
@@ -41,15 +41,16 @@ h1 {
 
 p {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .card {
-  background-color: rgb(29, 23, 34);
+  background-color: rgb(59, 76, 92);
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  
+  margin-top: 10px;
   text-align: center;
 }
 
